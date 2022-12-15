@@ -1,6 +1,6 @@
-import React from 'react'
-
+import React from 'react';
 import axios from 'axios';
+
 import Drashah from './Drashah';
 import ViewAllButton from './ViewAllButton';
 
@@ -17,7 +17,7 @@ export default function App() {
 
   const drashahItems = drashosList.map(function (drashah) {
     return (
-      <Drashah title={drashah.title} description={drashah.description} />)
+      <Drashah key={drashah.id} title={drashah.title} description={drashah.description} />)
   })
 
   return (
@@ -25,7 +25,7 @@ export default function App() {
       <ul>
         {drashahItems}
       </ul>
-      <ViewAllButton/>
+      <ViewAllButton />
     </div>
   )
 }
