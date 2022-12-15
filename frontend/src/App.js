@@ -2,6 +2,7 @@ import React from 'react'
 
 import axios from 'axios';
 import Drashah from './Drashah';
+import ViewAllButton from './ViewAllButton';
 
 
 export default function App() {
@@ -21,10 +22,10 @@ export default function App() {
 
   return (
     <div>
-      <h1 className="text-xl text-red-600">
-        Hello world!
+      <ul>
         {drashahItems}
-      </h1>
+      </ul>
+      <ViewAllButton/>
     </div>
   )
 }
