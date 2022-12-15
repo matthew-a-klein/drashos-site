@@ -1,31 +1,17 @@
 import React from 'react';
-import axios from 'axios';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Drashah from './Drashah';
-import ViewAllButton from './ViewAllButton';
+import ViewDrashos from './pages/ViewDrashos'
+import Home from './pages/Home';
+
 
 
 export default function App() {
+  return (<Router>
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/viewdrashos/' element={<ViewDrashos/>}/>
+    </Routes>
 
-  const [drashosList, setDrashosList] = React.useState([])
-
-  React.useEffect(() => {
-    axios.get('api/drashos').then(function (response) {
-      setDrashosList(response.data)
-    })
-  }, [])
-
-  const drashahItems = drashosList.map(function (drashah) {
-    return (
-      <Drashah key={drashah.id} title={drashah.title} description={drashah.description} />)
-  })
-
-  return (
-    <div>
-      <ul>
-        {drashahItems}
-      </ul>
-      <ViewAllButton />
-    </div>
-  )
+  </Router>)
 }
