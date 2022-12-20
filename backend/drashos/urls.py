@@ -5,5 +5,7 @@ from . import views
 
 
 urlpatterns = [
-    path('drashos/', views.drashos_api) # localhost:8000/api/drashos
+    path('list/', views.drashah_list_view), # localhost:8000/api/drashos
+    path('create/', views.drashah_create_view)
 ]
+

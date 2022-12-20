@@ -8,7 +8,7 @@ export default function ViewDrashos() {
     const [drashosList, setDrashosList] = React.useState([])
   
     React.useEffect(() => {
-      axios.get('api/drashos').then(function (response) {
+      axios.get('api/drashos/retrieve/').then(function (response) {
         setDrashosList(response.data)
       })
     }, [])

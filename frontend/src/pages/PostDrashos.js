@@ -20,7 +20,7 @@ export default function PostDrashos() {
 
     function handleSubmit(event) {
         event.preventDefault()
-        axios.post('/api/drashos/', formData)
+        axios.post('/api/drashos/create/', formData)
             .then(function (response) {
                 console.log(response);
             })
