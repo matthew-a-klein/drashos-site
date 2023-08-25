@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "D": "^1.0.0",
+    "react-router": "^6.10.0",
+    "react-router-dom": "^6.10.0",
+    "vitest": "^0.29.8"
+  }
+}

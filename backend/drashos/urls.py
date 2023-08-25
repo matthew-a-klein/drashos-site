@@ -1,11 +1,15 @@
-from django.urls import path
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
 
 from . import views
-# from .views import api_home
 
+router = DefaultRouter()
 
+router.register(r'drashos', views.DrashahViewset, basename='drashos')
+router.register(r'drashosids', views.DrashahIDNameViewset,
+                basename='drashosids')
+
+router.register(r'categories', views.CategoryViewset, basename='categories')
 urlpatterns = [
-    path('list/', views.drashah_list_view), # localhost:8000/api/drashos
-    path('create/', views.drashah_create_view)
+    path('', include(router.urls))
 ]
-
