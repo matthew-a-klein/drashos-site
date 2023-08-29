@@ -6,7 +6,7 @@ const Base = () => {
   return (
     <div className="flex min-h-screen flex-col">
       <Navbar />
-      <div className="mb-auto">
+      <div className="mb-auto ">
         <Outlet />
       </div>
 
