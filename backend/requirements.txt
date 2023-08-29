@@ -3,3 +3,4 @@ djangorestframework
 django-cors-headers
 djangorestframework-simplejwt
 drf_extra_fields
+algoliasearch-django>=3.0,<4.0
